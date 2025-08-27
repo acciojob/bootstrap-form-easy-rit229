@@ -6,12 +6,15 @@
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Intern Application Form</title>
-
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Intern Application Form</title>
+    <script type="text/javascript" src="./script.js">
 	<div class="container">
+        <h2>Intern Application Form</h2>
         <form>
             <div class="form-group">
                 <label for="first-name-input">First Name</label>
@@ -61,8 +64,23 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
+    <script>
+        // Example of how to handle form submission and validation
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var form = document.getElementsByTagName('form')[0];
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    	
+</script>
 
 </body>
 
